@@ -1,0 +1,58 @@
+*,
+body,
+html {
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    #svg {
+        background-color: #000;
+        position: absolute;
+        top: 2em;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+
+        g #rect1 {
+            fill: #0f0;
+        }
+
+        g #rect2 {
+            fill: #f00;
+            //transform:translateY(100px);
+        }
+        // #rect-Mask {
+        //     transform:translateX(50px);
+        //     transform:translateY(50px);
+        //     transform: translate(50px,50px);
+        // }
+    }
+    #svg:hover #rect3 {animation: 3s moveMask forwards ease-in-out;}
+    
+}
+@keyframes moveMask {
+   0% {
+    transform: translate(0px, 0px);
+   }
+   20% {
+    transform: translate(50px, 0px);
+   }
+   40% {
+    transform: translate(100px, 0px);
+   }
+   60% {
+    transform: translate(100px, 50px);
+   }
+  80% {
+    transform: translate(50px, 50px);
+   }
+  100% {
+    transform: translate(50px, 0px);
+   }
+}
